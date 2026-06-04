@@ -21,8 +21,8 @@
   p.body.cn, .project-desc.cn, .service-list li.cn { color:var(--ink-2); }
   .bilingual-cn { display:block; font-family:'Noto Sans SC',sans-serif; font-size:0.46em; opacity:0.6; letter-spacing:0.02em; line-height:1.45; margin-top:8px; font-weight:400; }
   .headline .bilingual-cn { font-family:'Satoshi',sans-serif; font-weight:300; opacity:0.5; font-size:0.42em; letter-spacing:0; line-height:1.35; }
-  .hero-cn { display:block; font-family:'Noto Sans SC',sans-serif; font-size:0.42em; opacity:0.78; letter-spacing:0.02em; line-height:1.4; margin-top:14px; font-weight:500; }
-  .hero-cn-sm { display:block; font-family:'Noto Sans SC',sans-serif; font-size:0.8em; opacity:0.85; letter-spacing:0.02em; line-height:1.6; margin-top:10px; font-weight:400; }
+  .hero-cn { display:block; font-family:'Noto Sans SC',sans-serif; font-size:0.62em; opacity:0.82; letter-spacing:0.02em; line-height:1.5; margin-top:18px; font-weight:400; }
+  .hero-cn-sm { display:block; font-family:'Noto Sans SC',sans-serif; font-size:0.66em; opacity:0.78; letter-spacing:0.02em; line-height:1.6; margin-top:14px; font-weight:400; }
   body { font-family:'Satoshi',-apple-system,BlinkMacSystemFont,sans-serif;
     color:var(--ink); line-height:1.5; background:var(--cream);
     -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
@@ -52,6 +52,7 @@
   .h-large { font-size:clamp(30px, 6.4vw, 72px); font-weight:700; line-height:1.05; letter-spacing:-0.03em; color:var(--ink); }
   .h-med { font-size:32px; font-weight:700; line-height:1.1; letter-spacing:-0.025em; color:var(--ink); }
   .lede { font-size:clamp(18px, 2.5vw, 26px); font-weight:700; line-height:1.4; color:var(--ink); margin-top:40px; max-width:620px; }
+  .lede .lede-sub { font-weight:300; opacity:0.78; display:inline-block; margin-top:4px; }
   p.body { font-size:16px; line-height:1.65; color:var(--ink); max-width:580px; margin-top:24px; }
   .service-list { list-style:none; padding:0; margin:24px 0 0; max-width:600px; }
   .service-list li { font-size:15px; line-height:1.7; color:var(--ink); padding:14px 0; position:relative; border-top:1px solid var(--rule); }
@@ -80,6 +81,8 @@
   .hero-title-below { margin-top:14px; }
   @media(min-width:680px){ .hero-title-below { margin-top:32px; } }
   .hero-cities { font-size:clamp(11px, 1.4vw, 13px); letter-spacing:0.24em; text-transform:uppercase; color:var(--ink); font-weight:700; margin-top:24px; }
+  .hero-cities span { display:block; line-height:1.85; }
+  @media(min-width:680px){ .hero-cities span { display:inline; margin-right:32px; } .hero-cities span:last-child { margin-right:0; } }
   @media(min-width:680px){ .hero-cities { margin-top:32px; font-size:14px; } }
   @media(min-width:680px){ .hero-cities { font-size:14px; } }
   .hero-mid { margin-top:auto; margin-bottom:48px; padding:0; min-height:0; }
@@ -91,7 +94,7 @@
   
 
   /* === PILLARS (vertical, big) === */
-  .pillar-bg { position:relative; min-height:0; aspect-ratio:5/6; background-size:cover; background-position:center; margin-bottom:20px; overflow:hidden; display:flex; }
+  .pillar-bg { position:relative; min-height:0; aspect-ratio:5/6; background-size:cover; background-position:center; margin-bottom:0; overflow:hidden; display:flex; }
   .pillar-bg::before { content:""; position:absolute; inset:0; background:linear-gradient(90deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.5) 38%, rgba(0,0,0,0.28) 68%, rgba(0,0,0,0.18) 100%), linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.35) 100%); }
   .pillar-content { position:relative; z-index:2; padding:32px 26px 36px; color:#fff; align-self:center; width:100%; }
   @media(min-width:680px){ .pillar-content { padding:28px 32px 44px; } }
@@ -328,9 +331,9 @@
 
   <div class="hero-img-full" style="display:none;"></div>
     <div class="hero-mid">
-      <h1 class="h-large hero-title-below">Architecture, in the age of intelligence<span class="accent-dot">.</span><span class="hero-cn">WUA 建筑事务所　智能时代的建筑设计实践</span></h1>
-      <p class="lede" style="margin-top:36px;">A practice and a laboratory — designing buildings and the instruments that produce them.<span class="hero-cn-sm">我们设计城市与建筑，也创造支持设计与交付的工具。<br>我们是一家建筑事务所，也是一座面向未来的创新实验室。</span></p>
-      <div class="hero-cities cn">伦敦 LONDON &nbsp;·&nbsp; 利雅得 RIYADH &nbsp;·&nbsp; 上海 SHANGHAI</div>
+      <h1 class="h-large hero-title-below">Architecture, in the age of intelligence<span class="accent-dot">.</span><span class="hero-cn">WUA 建筑事务所<br>智能时代的建筑设计实践</span></h1>
+      <p class="lede" style="margin-top:36px;">A practice and a laboratory.<br><span class="lede-sub">Designing buildings and the instruments that produce them.</span><span class="hero-cn-sm">我们设计城市与建筑，也创造支持设计与交付的工具。<br>我们是一家建筑事务所，也是一座面向未来的创新实验室。</span></p>
+      <div class="hero-cities cn"><span>伦敦 LONDON</span><span>利雅得 RIYADH</span><span>上海 SHANGHAI</span></div>
     </div>
 
     <div class="hero-foot">
